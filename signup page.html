@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        background-color: grey
+    }
+
+    div{
+        background-color: white;
+        width: 60%;
+        margin: auto;
+        padding: 10%;
+    }
+    input,button{
+        width:100%;
+        font-size: 25px;
+        display: block;
+        margin-top: 20px;
+    }
+    #signup{
+        margin-top: 70px;
+    }
+
+   
+</style>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <div>
+        <form>
+         <input type = "text" id = "name" placeholder="UserName"/>
+         <input type = "email" id = "email"  placeholder="E-mail"/>
+         <input type = "password" id = "pssword" placeholder="password"/>
+         <button id = "Signup">Signup</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+   let form = document.querySelector("form");
+   let userData = JSON.parse(localStorage.getItem("userData")) || [];
+
+   form.addEventListener("submit", function(){
+    event.preventDefault();
+     let data = {
+        name: form.name.value,
+        email: form.email.value,
+        password: form.pssword.value,
+     }  
+
+     if(checkEmails(data.email) === true){
+      userData.push(data);
+      localStorage.setItem("userData", JSON.stringify(userData));
+      alert("Succesfully Done")
+      window.location.href = "sign in.html"
+     }
+     else
+     {
+        alert("Account Already There");
+     }
+   }) 
+   
+   function checkEmails(email) {
+    let filtered = userData.filter(function(element){
+        return email === element.email;
+    })
+    if(filtered.email > 0){
+        return false;
+    }
+    else{
+        return true;
+    }
+   }
+
+
+</script>
