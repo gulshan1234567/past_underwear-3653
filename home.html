@@ -37,10 +37,15 @@
   }
   #top4{
     width: 100%;
+    height: 40px;
     display: flex;
     justify-content:center;
     gap:15px;
     cursor: pointer;
+    position: sticky;
+    top:0px;
+    background-color: grey;
+    margin-top: 30px;
   }
   #top4>div>button{
     font-size: 20px;
@@ -65,6 +70,10 @@
     cursor: pointer;
     text-decoration-line: none;
   }
+  /* #top4>div>p>a{
+    color: black;
+    text-decoration-line: none;
+  } */
   #top5{
     width: 100%;
     height: 20px;
@@ -439,7 +448,51 @@ background-color: whitesmoke;
        margin: auto;
        margin-left: 300px;
        background-color: grey;
-       }
+    }
+
+
+    /* adding Media Quries from here*/
+    @media all and (min-width: 479px) and (max-width:720px)
+  {
+    #top{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content:center;
+    gap: 15px;
+    cursor: pointer;
+  }
+  #top3{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content:center;
+    gap:10px;
+  }
+  #top4{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content:center;
+    gap:15px;
+    cursor: pointer;
+    position: sticky;
+    top:0px;
+    background-color: grey;
+    margin-top: 30px;
+  }
+  #top5{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    gap: 20px;
+    margin-left: 120px;
+  } 
+  }
+
+ 
+
+
 
 
     </style>
@@ -481,17 +534,17 @@ background-color: whitesmoke;
 
 
     <div id =  "top4">
-    <div><p>MENU</p></div>
+    <div><p><a href = "navbar menu.html">MENU</a></p></div>
     <div><p>TODYA'S PAPER</p></div>
-    <div><p>NEWS</p></div>
-    <div><p>OPTION</p></div>
-    <div><p>BUSSINESS</p></div>
-    <div><p>SPORT</p></div>
-    <div><p>ENTERTAINMENT</p></div>
+     <div><p><a href = "navbar page.html">NEWS</a></p></div>
+    <div><p><a href = "navbar page.html">OPNION</a></p></div>
+    <div><p><a href = "navbar page.html">BUSSINESS</a></p></div>
+    <div><p><a href = "navbar page.html">SPORT</a></p></div>
+    <div><p><a href = "navbar page.html">ENTERTAINMENT</a></p></div>
     <div><p>CROSSWORLD +</p></div>
     <div><p>SCIENCE</p></div>
     <div class = "a"><button><a href ="get trial.html">GET TRIAL</a></button></div>
-    <div class = "b"><button><a href = "">SUBSCRIBE NOW</a></button></div>
+    <div class = "b"><button><a href = "paymenthome.html">SUBSCRIBE NOW</a></button></div>
     <div class="c" ><button><a href = "sign in.html">LOGIN</a></button></div>
 </div>
 <div><hr></div>
